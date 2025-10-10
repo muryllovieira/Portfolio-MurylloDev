@@ -145,7 +145,7 @@ const Hero = () => {
                 <img
                   alt="Mockup de laptop mostrando site WordPress moderno"
                   className="w-full max-w-md mx-auto"
-                  src="https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/09/image-scaled.jpg"
+                  src="https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-18-at-14.51.42-e1758218124265.jpeg"
                 />
               </div>
           
@@ -157,8 +157,9 @@ const Hero = () => {
               >
                 <img  
                   alt="Foto Muryllo Dev"
-                  className="w-32 h-auto"
-                 src="https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/09/image2.jpg" />
+                  className="w-52 h-auto"
+                  src="https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-18-at-14.51.41-e1758218197222.jpeg"
+                />
               </motion.div>
             </div>
 

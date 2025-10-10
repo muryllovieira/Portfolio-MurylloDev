@@ -18,14 +18,14 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>WP Expert - Sites WordPress e Lojas Virtuais que Convertem</title>
+        <title>Muryllo Dev - Sites WordPress e Lojas Virtuais que Convertem</title>
         <meta name="description" content="Desenvolvimento profissional de sites WordPress e lojas virtuais WooCommerce. SEO otimizado, design responsivo e foco em conversão. Mais de 50 projetos entregues com satisfação." />
-        <meta property="og:title" content="WP Expert - Sites WordPress e Lojas Virtuais que Convertem" />
+        <meta property="og:title" content="Muryllo Dev - Sites WordPress e Lojas Virtuais que Convertem" />
         <meta property="og:description" content="Desenvolvimento profissional de sites WordPress e lojas virtuais WooCommerce. SEO otimizado, design responsivo e foco em conversão." />
         <meta property="og:type" content="website" />
         <meta name="keywords" content="wordpress, woocommerce, desenvolvimento web, loja virtual, ecommerce, seo, sites responsivos" />
-        <meta name="author" content="WP Expert" />
-        <link rel="canonical" href="https://wpexpert.com.br" />
+        <meta name="author" content="Muryllo Dev" />
+        <link rel="canonical" href="https://muryllovieira.com.br" />
       </Helmet>
 
       <div className="min-h-screen">

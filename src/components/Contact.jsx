@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/components/ui/use-toast';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -29,25 +30,58 @@ const Contact = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    if (!formData.consent) {
-      toast({
-        title: "Consentimento necessário",
-        description: "Por favor, aceite os termos de privacidade para continuar.",
-        variant: "destructive",
-        duration: 5000,
-      });
-      return;
-    }
+  e.preventDefault();
 
-    // Simulate form submission
-    toast({
-      title: "🚧 Funcionalidade em desenvolvimento",
-      description: "Esta funcionalidade ainda não foi implementada—mas não se preocupe! Você pode solicitar na sua próxima mensagem! 🚀",
-      duration: 5000,
-    });
-  };
+  if (!formData.consent) {
+    toast({
+      title: "Consentimento necessário",
+      description: "Por favor, aceite os termos de privacidade para continuar.",
+      variant: "destructive",
+      duration: 5000,
+    });
+    return;
+  }
+ 
+  // Dados que serão enviados
+  const templateParams = {
+    name: formData.name,
+    email: formData.email,
+    whatsapp: formData.whatsapp,
+    projectType: formData.projectType,
+    budget: formData.budget,
+    message: formData.message,
+  };
+
+  emailjs.send(
+    'service_o5lmdp7',
+    'template_0xy9fx5',
+    templateParams,
+    'hLvZ3TNN_bqpoKhlo'
+  ).then((response) => {
+    toast({
+      title: "Solicitação enviada!",
+      description: "Seu contato foi enviado com sucesso. Retorno em até 2 horas.",
+      duration: 5000,
+    });
+    setFormData({
+      name: '',
+      email: '',
+      whatsapp: '',
+      projectType: '',
+      budget: '',
+      message: '',
+      consent: false
+    });
+  }).catch((err) => {
+    toast({
+      title: "Erro ao enviar",
+      description: "Tente novamente mais tarde ou pelos canais de contato direto.",
+      variant: "destructive",
+      duration: 5000,
+    });
+  });
+};
+
 
   return (
     <section id="contato" className="py-20 bg-gray-50">

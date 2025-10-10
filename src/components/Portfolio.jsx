@@ -18,7 +18,6 @@ const Portfolio = () => {
         before: 'Site desatualizado, baixa conversão',
         after: '150% mais vendas, 3x mais visitas'
       },
-      url: 'https://exemplo.com'
     },
     {
       id: 2,
@@ -33,7 +32,6 @@ const Portfolio = () => {
         before: 'Vendas apenas físicas',
         after: '200% aumento no faturamento total'
       },
-      url: 'https://exemplo.com'
     },
     {
       id: 3,
@@ -48,7 +46,6 @@ const Portfolio = () => {
         before: 'Poucos leads online',
         after: '80% mais consultas qualificadas'
       },
-      url: 'https://exemplo.com'
     },
     {
       id: 4,
@@ -63,7 +60,6 @@ const Portfolio = () => {
         before: 'Reservas apenas por telefone',
         after: '120% mais reservas online'
       },
-      url: 'https://exemplo.com'
     },
     {
       id: 5,
@@ -78,9 +74,21 @@ const Portfolio = () => {
         before: 'Taxa de conversão 2%',
         after: 'Taxa de conversão 8%'
       },
-      url: 'https://exemplo.com'
     },
-    
+    {
+      id: 6,
+      title: 'Chaveiro 24h',
+      category: 'landing',
+      niche: 'Chaveiros',
+      image: 'https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/09/imagem_2025-09-18_151041083.png',
+      result: '+100% de clientes',
+      description: '.',
+      stack: ['WordPress', 'Elementor', 'Conversion Optimization'],
+      metrics: {
+        before: 'Taxa de conversão 2%',
+        after: 'Taxa de conversão 8%'
+      },
+    },
   ];
 
   return (
@@ -121,20 +129,7 @@ const Portfolio = () => {
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                     src={`${project.image}`}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <div className="flex gap-2">
-                        <Button
-                          size="sm"
-                          className="bg-white/20 backdrop-blur-sm text-white border-white/30"
-                          onClick={() => window.open(project.url, '_blank')}
-                        >
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          Ver Detalhes
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
+                  
                 </div>
 
                 {/* Corpo */}
@@ -150,13 +145,7 @@ const Portfolio = () => {
 
                   <div className="flex items-center justify-between">
                     <span className="text-emerald-600 font-semibold">{project.result}</span>
-                    <button
-                      aria-label={`Visitar ${project.title}`}
-                      onClick={() => window.open(project.url, '_blank')}
-                      className="p-1 rounded hover:bg-emerald-50 transition-colors"
-                    >
-                      <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-emerald-500 transition-colors" />
-                    </button>
+                    
                   </div>
                 </div>
               </motion.div>

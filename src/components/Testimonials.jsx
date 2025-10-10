@@ -9,39 +9,43 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Ana Paula Silva',
-      role: 'CEO, E-commerce de Moda',
-      image: 'Professional woman in business attire smiling confidently',
+      name: 'Wesley Moraes',
+      role: 'COO, Chief Operating Officer (Diretor de Operações)',
+      image: 'COO, Chief Operating Officer (Diretor de Operações)',
       rating: 5,
       text: 'Meu faturamento cresceu 38% após o novo site. O processo foi ágil e o resultado ficou acima do esperado. Recomendo para qualquer empresário que quer resultados reais.',
-      project: 'Loja Virtual de Moda Feminina'
+      project: 'Site para um Sistema Financeiro',
+      image: 'https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/10/imagem_2025-10-10_150456488.png'
     },
     {
       id: 2,
-      name: 'Carlos Mendes',
-      role: 'Diretor, Clínica Médica',
-      image: 'Professional doctor in white coat with stethoscope',
+      name: 'Richard Flor',
+      role: 'Proprietário, Importação de Produtos',
+      image: 'Proprietário, Importação de Produtos',
       rating: 5,
-      text: 'Triplicamos os agendamentos online em apenas 2 meses. O site ficou moderno, rápido e nossos pacientes adoraram a facilidade para marcar consultas.',
-      project: 'Site Institucional + Sistema de Agendamento'
+      text: 'O site ficou moderno, rápido e nossos clientes adoraram conhecer mais sobre a empresa.',
+      project: 'Site Institucional',
+      image: 'https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/10/imagem_2025-10-10_150017361.png'
     },
     {
       id: 3,
-      name: 'Marina Costa',
-      role: 'Proprietária, Restaurante Gourmet',
-      image: 'Professional chef woman in kitchen uniform smiling',
+      name: 'Caroline Portela',
+      role: 'Proprietária, Produtos Veganos',
+      image: 'Proprietária, Produtos Veganos',
       rating: 5,
-      text: 'O site transformou nosso negócio! As reservas online aumentaram 120% e conseguimos mostrar nosso cardápio de forma elegante. Investimento que se pagou rapidamente.',
-      project: 'Site com Sistema de Reservas'
+      text: 'O site transformou nosso negócio! As vendas online dispararam e o design reflete perfeitamente nossos valores veganos. Atendimento excelente do início ao fim.',
+      project: 'Site Institucional para Produtos Vegano',
+      image: 'https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/10/imagem_2025-10-10_150657796.png'
     },
     {
       id: 4,
-      name: 'Roberto Oliveira',
-      role: 'Sócio, Escritório de Advocacia',
-      image: 'Professional lawyer in suit with law books background',
+      name: 'Cleiton Lima',
+      role: 'Proprietário, Loja de Baterias',
+      image: 'Proprietário, Loja de Baterias',
       rating: 5,
-      text: 'Profissionalismo exemplar! O site transmite exatamente a seriedade que nosso escritório precisa. Os leads qualificados aumentaram significativamente.',
-      project: 'Site Institucional Jurídico'
+      text: 'Profissionalismo exemplar! O site transmite exatamente a seriedade que nossa loja precisa. Os leads qualificados aumentaram significativamente.',
+      project: 'Site Institucional para Loja de Baterias',
+      image: 'https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/10/imagem_2025-10-10_151227282.png'
     },
 
   
@@ -105,7 +109,7 @@ const Testimonials = () => {
                   <img  
                     alt={`Foto de ${testimonials[currentIndex].name}`}
                     className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
-                   src="https://images.unsplash.com/photo-1644424235476-295f24d503d9" />
+                   src={testimonials[currentIndex].image} />
                   
                   <div className="flex justify-center space-x-1 mb-4">
                     {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
@@ -184,7 +188,7 @@ const Testimonials = () => {
                 <img  
                   alt={`Miniatura de ${testimonial.name}`}
                   className="w-12 h-12 rounded-full object-cover"
-                 src="https://images.unsplash.com/photo-1644424235476-295f24d503d9" />
+                 src={testimonial.image} />
               </motion.button>
             ))}
           </div>
