@@ -1,41 +1,41 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Zap, Shield, Award, Users, TrendingUp } from 'lucide-react';
+import { Code, Zap, Shield, Award, Users, TrendingUp, Cloud, Bot, CloudCog } from 'lucide-react';
 
 const About = () => {
   const skills = [
-    { name: 'WordPress', level: 95 },
-    { name: 'WooCommerce', level: 90 },
-    { name: 'SEO', level: 88 },
-    { name: 'UX/UI Design', level: 92 },
-    { name: 'PageSpeed', level: 91 },
+    { name: 'React', level: 100 },
+    { name: 'TypeScript', level: 90 },
+    { name: 'Kotlin', level: 88 },
+    { name: 'Node', level: 91 },
+    { name: 'UX/UI Design', level: 100 },
   ];
 
-  const achievements = [
-    {
-      icon: Users,
-      number: '50+',
-      label: 'Clientes Satisfeitos'
-    },
+  const certifications = [
     {
       icon: Code,
-      number: '50+',
-      label: 'Projetos Entregues'
+      number: ' Formação React Native Developer',
+      label: 'DIO'
     },
     {
-      icon: TrendingUp,
-      number: '150%',
-      label: 'Média de Crescimento'
+      icon: CloudCog,
+      number: 'Implantação de Serviços em Nuvem',
+      label: 'Microsoft AZ-900'
+    },
+    {
+      icon: Bot,
+      number: 'Cisco IT Essencial',
+      label: 'Cisco'
     },
     {
       icon: Award,
-      number: '100%',
-      label: 'Taxa de Satisfação'
+      number: 'Técnico de Desenvolvimento de Sistemas ',
+      label: 'Senai Jandira'
     }
   ];
 
   return (
-    <section id="sobre" className="py-20 bg-white">
+    <section id="sobre" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
@@ -47,25 +47,22 @@ const About = () => {
           >
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Especialista em <span className="gradient-text">WordPress</span>
+                <span className="gradient-text">Sobre Mim</span>
               </h2>
               
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Sou especialista em WordPress, WooCommerce e performance web. 
-                  Com mais de 2 anos de experiência, transformo ideias em sites rápidos, 
-                  seguros e preparados para vender.
+                  Olá! Me chamo Muryllo Vieira e sou desenvolvedor com mais de 3 anos de experiência na criação de aplicações web modernas, responsivas e acessíveis. Formado como Técnico em Desenvolvimento de Sistemas pelo SENAI Jandira, atualmente atuo como estagiário de desenvolvimento de sistemas, aplicando diariamente minhas habilidades em projetos reais.​
+
                 </p>
                 
                 <p>
-                  Minha missão é simples: criar sites que não apenas impressionam visualmente, 
-                  mas que realmente convertem visitantes em clientes. Cada projeto é desenvolvido 
-                  com foco em resultados mensuráveis e crescimento sustentável do seu negócio.
+                  Minha especialização está em JavaScript, TypeScript, React e Next.js, com forte foco em qualidade de código através de testes unitários e de integração. Também possuo conhecimento em desenvolvimento mobile utilizando React Native e Kotlin, sempre buscando criar experiências fluidas e de alto desempenho.​
+
                 </p>
                 
                 <p>
-                  Trabalho com metodologia comprovada, utilizando as melhores práticas de SEO, 
-                  UX/UI e performance para garantir que seu investimento gere retorno real.
+                  Além das competências técnicas, tenho experiência em liderança técnica, coordenação de equipes e aplicação de metodologias ágeis para otimizar processos e garantir entregas consistentes. Sou comunicativo, responsável e movido por desafios que me permitam crescer como profissional.
                 </p>
               </div>
             </div>
@@ -100,19 +97,6 @@ const About = () => {
               </div>
             </div>
 
-            {/* Certifications */}
-            <div className="flex flex-wrap gap-4">
-              {[
-                { icon: Code, text: 'WordPress Expert' },
-                { icon: Zap, text: 'Performance Specialist' },
-                { icon: Shield, text: 'Security Certified' }
-              ].map((cert, index) => (
-                <div key={cert.text} className="flex items-center space-x-2 bg-emerald-50 text-emerald-700 px-4 py-2 rounded-full text-sm font-medium">
-                  <cert.icon className="w-4 h-4" />
-                  <span>{cert.text}</span>
-                </div>
-              ))}
-            </div>
           </motion.div>
 
           {/* Visual */}
@@ -136,27 +120,29 @@ const About = () => {
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-r from-emerald-300 to-emerald-500 rounded-full opacity-10 blur-2xl"></div>
             </div>
 
-            {/* Achievements Grid */}
+            {/* Certifications Grid */}
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Certificações</h3>
             <div className="grid grid-cols-2 gap-4">
-              {achievements.map((achievement, index) => (
+              {certifications.map((certification, index) => (
                 <motion.div
-                  key={achievement.label}
+                  key={certification.label}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   className="bg-gradient-to-br from-emerald-50 to-white p-6 rounded-xl border border-emerald-100 text-center"
                 >
-                  <achievement.icon className="w-8 h-8 text-emerald-600 mx-auto mb-3" />
+                  <certification.icon className="w-8 h-8 text-emerald-600 mx-auto mb-3" />
                   <div className="text-2xl font-bold text-gray-900 mb-1">
-                    {achievement.number}
+                    {certification.number}
                   </div>
                   <div className="text-sm text-gray-600">
-                    {achievement.label}
+                    {certification.label}
                   </div>
                 </motion.div>
               ))}
             </div>
+
           </motion.div>
         </div>
       </div>

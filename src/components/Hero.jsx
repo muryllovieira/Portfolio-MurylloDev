@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Play, Star } from 'lucide-react';
+import { ArrowRight, Download, Play, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -46,41 +46,45 @@ const Hero = () => {
               transition={{ delay: 0.2 }}
               className="inline-flex items-center space-x-2 bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-medium"
             >
-              <Star className="w-4 h-4 fill-current" />
-              <span>+50 projetos entregues com satisfação</span>
+             
+              <span>Desenvolvedor Front-End & Mobile</span>
             </motion.div>
 
             <div className="space-y-6">
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Sites WordPress que{' '}
-                <span className="gradient-text">destacam sua marca</span>
+                <span className="gradient-text">Muryllo Vieira</span>
+              </h1>
+              <h1 className="text-4xl lg:text-3xl font-bold text-gray-500 leading-tight">
+        
+                <span className="text-gray-500">Desenvolvedor Front-End & Mobile</span>
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed">
-                Desempenho elevado, SEO avançado e foco total em conversão. 
-                Transformo sua presença digital em resultados reais.
+                Crio interfaces modernas, performáticas e focadas na experiência do usuário.
               </p>
             </div>
 
+            
+
             {/* Features list */}
-            <div className="grid grid-cols-2 gap-4 text-sm">
+          <div className="grid grid-cols-2 gap-4 text-sm">
               {[
-                'Layout exclusivo',
-                'Mobile-first',
-                'Integração WhatsApp',
-                'Checkout otimizado',
-                'Métricas e Analytics',
-                'SEO Avançado'
-              ].map((feature, index) => (
+                'TypeScript',
+                'React.js',
+                'React Native',
+                'Tailwind CSS',
+                'Otimização (Web/App)',
+                'Git / GitHub'
+              ].map((skill, index) => (
                 <motion.div
-                  key={feature}
+                  key={skill}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 + index * 0.1 }}
                   className="flex items-center space-x-2 text-gray-700"
                 >
                   <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                  <span>{feature}</span>
+                  <span>{skill}</span>
                 </motion.div>
               ))}
             </div>
@@ -92,15 +96,16 @@ const Hero = () => {
               transition={{ delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Button
+
+               <Button
                 onClick={() => scrollToSection('#contato')}
                 className="btn-primary text-white px-8 py-3 text-lg"
                 size="lg"
               >
-                Solicitar Orçamento
-                <ArrowRight className="w-5 h-5 ml-2" />
+                Download CV
+                <Download className="w-5 h-5 ml-2" />
               </Button>
-              
+
               <Button
                 variant="outline"
                 onClick={() => scrollToSection('#portfolio')}
@@ -112,24 +117,7 @@ const Hero = () => {
               </Button>
             </motion.div>
 
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
-              className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-200"
-            >
-              {[
-                { number: '50+', label: 'Projetos' },
-                { number: '100%', label: 'Satisfação' },
-                { number: '15', label: 'Dias médios' }
-              ].map((stat, index) => (
-                <div key={stat.label} className="text-center">
-                  <div className="text-2xl font-bold text-emerald-600">{stat.number}</div>
-                  <div className="text-sm text-gray-600">{stat.label}</div>
-                </div>
-              ))}
-            </motion.div>
+            
           </motion.div>
 
           {/* Visual */}
@@ -145,22 +133,11 @@ const Hero = () => {
                 <img
                   alt="Mockup de laptop mostrando site WordPress moderno"
                   className="w-full max-w-md mx-auto"
-                  src="https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-18-at-14.51.42-e1758218124265.jpeg"
+                  src="https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/11/10894EDC-4837-4CD0-B42D-9D381CD7425C-scaled.jpg"
                 />
               </div>
           
-              <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1 }}
-                className="absolute -bottom-10 -right-10 z-20"
-              >
-                <img  
-                  alt="Foto Muryllo Dev"
-                  className="w-52 h-auto"
-                  src="https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-18-at-14.51.41-e1758218197222.jpeg"
-                />
-              </motion.div>
+
             </div>
 
             {/* Decorative elements */}
