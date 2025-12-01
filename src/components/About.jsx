@@ -1,13 +1,12 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Zap, Shield, Award, Users, TrendingUp, Cloud, Bot, CloudCog } from 'lucide-react';
+import { Award, Bot, CloudCog, Code } from 'lucide-react';
 
 const About = () => {
   const skills = [
     { name: 'React', level: 100 },
-    { name: 'TypeScript', level: 90 },
-    { name: 'Kotlin', level: 88 },
-    { name: 'Node', level: 91 },
+    { name: 'TypeScript', level: 100 },
+    { name: 'Kotlin', level: 100 },
+    { name: 'Node', level: 100 },
     { name: 'UX/UI Design', level: 100 },
   ];
 
@@ -15,23 +14,23 @@ const About = () => {
     {
       icon: Code,
       number: ' Formação React Native Developer',
-      label: 'DIO'
+      label: 'DIO',
     },
     {
       icon: CloudCog,
       number: 'Implantação de Serviços em Nuvem',
-      label: 'Microsoft AZ-900'
+      label: 'Microsoft AZ-900',
     },
     {
       icon: Bot,
       number: 'Cisco IT Essencial',
-      label: 'Cisco'
+      label: 'Cisco',
     },
     {
       icon: Award,
       number: 'Técnico de Desenvolvimento de Sistemas ',
-      label: 'Senai Jandira'
-    }
+      label: 'Senai Jandira',
+    },
   ];
 
   return (
@@ -49,27 +48,41 @@ const About = () => {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 <span className="gradient-text">Sobre Mim</span>
               </h2>
-              
+
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Olá! Me chamo Muryllo Vieira e sou desenvolvedor com mais de 3 anos de experiência na criação de aplicações web modernas, responsivas e acessíveis. Formado como Técnico em Desenvolvimento de Sistemas pelo SENAI Jandira, atualmente atuo como estagiário de desenvolvimento de sistemas, aplicando diariamente minhas habilidades em projetos reais.​
-
+                  Olá! Me chamo Muryllo Vieira e sou desenvolvedor com mais de 3
+                  anos de experiência na criação de aplicações web modernas,
+                  responsivas e acessíveis. Formado como Técnico em
+                  Desenvolvimento de Sistemas pelo SENAI Jandira, atualmente
+                  atuo como estagiário de desenvolvimento de sistemas, aplicando
+                  diariamente minhas habilidades em projetos reais.​
                 </p>
-                
-                <p>
-                  Minha especialização está em JavaScript, TypeScript, React e Next.js, com forte foco em qualidade de código através de testes unitários e de integração. Também possuo conhecimento em desenvolvimento mobile utilizando React Native e Kotlin, sempre buscando criar experiências fluidas e de alto desempenho.​
 
-                </p>
-                
                 <p>
-                  Além das competências técnicas, tenho experiência em liderança técnica, coordenação de equipes e aplicação de metodologias ágeis para otimizar processos e garantir entregas consistentes. Sou comunicativo, responsável e movido por desafios que me permitam crescer como profissional.
+                  Minha especialização está em JavaScript, TypeScript, React e
+                  Next.js, com forte foco em qualidade de código através de
+                  testes unitários e de integração. Também possuo conhecimento
+                  em desenvolvimento mobile utilizando React Native e Kotlin,
+                  sempre buscando criar experiências fluidas e de alto
+                  desempenho.​
+                </p>
+
+                <p>
+                  Além das competências técnicas, tenho experiência em liderança
+                  técnica, coordenação de equipes e aplicação de metodologias
+                  ágeis para otimizar processos e garantir entregas
+                  consistentes. Sou comunicativo, responsável e movido por
+                  desafios que me permitam crescer como profissional.
                 </p>
               </div>
             </div>
 
             {/* Skills */}
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Principais Competências</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-6">
+                Principais Competências
+              </h3>
               <div className="space-y-4">
                 {skills.map((skill, index) => (
                   <motion.div
@@ -80,8 +93,12 @@ const About = () => {
                     transition={{ delay: index * 0.1 }}
                   >
                     <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-700">{skill.name}</span>
-                      <span className="text-sm text-emerald-600 font-semibold">{skill.level}%</span>
+                      <span className="font-medium text-gray-700">
+                        {skill.name}
+                      </span>
+                      <span className="text-sm text-emerald-600 font-semibold">
+                        {skill.level}%
+                      </span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <motion.div
@@ -96,7 +113,6 @@ const About = () => {
                 ))}
               </div>
             </div>
-
           </motion.div>
 
           {/* Visual */}
@@ -109,19 +125,22 @@ const About = () => {
             {/* Profile Image */}
             <div className="relative">
               <div className="relative z-10 bg-white p-4 rounded-2xl shadow-xl">
-                <img  
+                <img
                   alt="Foto profissional do desenvolvedor WordPress especialista"
                   className="w-full h-80 object-cover rounded-xl"
-                 src="https://images.unsplash.com/photo-1529429612779-c8e40ef2f36d" />
+                  src="https://images.unsplash.com/photo-1529429612779-c8e40ef2f36d"
+                />
               </div>
-              
+
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-full opacity-20 blur-xl"></div>
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-r from-emerald-300 to-emerald-500 rounded-full opacity-10 blur-2xl"></div>
             </div>
 
             {/* Certifications Grid */}
-            <h3 className="text-xl font-bold text-gray-900 mb-6">Certificações</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">
+              Certificações
+            </h3>
             <div className="grid grid-cols-2 gap-4">
               {certifications.map((certification, index) => (
                 <motion.div
@@ -142,7 +161,6 @@ const About = () => {
                 </motion.div>
               ))}
             </div>
-
           </motion.div>
         </div>
       </div>

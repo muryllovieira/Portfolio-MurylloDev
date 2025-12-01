@@ -1,10 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Download, Play, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
+import { Download, Play } from 'lucide-react';
 
 const Hero = () => {
-  const scrollToSection = (href) => {
+  const scrollToSection = href => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -12,20 +11,23 @@ const Hero = () => {
   };
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
+    <section
+      id="inicio"
+      className="relative min-h-screen flex items-center overflow-hidden"
+    >
       {/* Background with gradient and tech pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-emerald-100 tech-pattern"></div>
-      
+
       {/* Floating geometric shapes */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
           className="absolute top-20 right-20 w-32 h-32 border-2 border-emerald-200 rounded-full opacity-30"
         />
         <motion.div
           animate={{ y: [-20, 20, -20] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
           className="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-r from-emerald-200 to-emerald-300 rounded-lg opacity-40"
         />
       </div>
@@ -46,7 +48,6 @@ const Hero = () => {
               transition={{ delay: 0.2 }}
               className="inline-flex items-center space-x-2 bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-medium"
             >
-             
               <span>Desenvolvedor Front-End & Mobile</span>
             </motion.div>
 
@@ -55,26 +56,26 @@ const Hero = () => {
                 <span className="gradient-text">Muryllo Vieira</span>
               </h1>
               <h1 className="text-4xl lg:text-3xl font-bold text-gray-500 leading-tight">
-        
-                <span className="text-gray-500">Desenvolvedor Front-End & Mobile</span>
+                <span className="text-gray-500">
+                  Desenvolvedor Front-End & Mobile
+                </span>
               </h1>
-              
+
               <p className="text-xl text-gray-600 leading-relaxed">
-                Crio interfaces modernas, performáticas e focadas na experiência do usuário.
+                Crio interfaces modernas, performáticas e focadas na experiência
+                do usuário.
               </p>
             </div>
 
-            
-
             {/* Features list */}
-          <div className="grid grid-cols-2 gap-4 text-sm">
+            <div className="grid grid-cols-2 gap-4 text-sm">
               {[
                 'TypeScript',
                 'React.js',
                 'React Native',
                 'Tailwind CSS',
                 'Otimização (Web/App)',
-                'Git / GitHub'
+                'Git / GitHub',
               ].map((skill, index) => (
                 <motion.div
                   key={skill}
@@ -96,15 +97,21 @@ const Hero = () => {
               transition={{ delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-
-               <Button
-                onClick={() => scrollToSection('#contato')}
-                className="btn-primary text-white px-8 py-3 text-lg"
-                size="lg"
+              <a
+                href="../pdf/CV - MURYLLO VIEIRA.pdf"
+                class="saiba-mais"
+                download
+                target="_blank"
               >
-                Download CV
-                <Download className="w-5 h-5 ml-2" />
-              </Button>
+                <Button
+                  onClick={() => {}}
+                  className="btn-primary text-white px-8 py-3 text-lg"
+                  size="lg"
+                >
+                  Download CV
+                  <Download className="w-5 h-5 ml-2" />
+                </Button>
+              </a>
 
               <Button
                 variant="outline"
@@ -116,8 +123,6 @@ const Hero = () => {
                 Ver Portfólio
               </Button>
             </motion.div>
-
-            
           </motion.div>
 
           {/* Visual */}
@@ -128,16 +133,13 @@ const Hero = () => {
             className="relative"
           >
             <div className="relative floating-animation">
-              
-             <div className="relative z-10">
+              <div className="relative z-10">
                 <img
                   alt="Mockup de laptop mostrando site WordPress moderno"
                   className="w-full max-w-md mx-auto"
                   src="https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/11/10894EDC-4837-4CD0-B42D-9D381CD7425C-scaled.jpg"
                 />
               </div>
-          
-
             </div>
 
             {/* Decorative elements */}
