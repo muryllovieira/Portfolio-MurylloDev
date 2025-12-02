@@ -40,35 +40,16 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative min-h-screen flex items-center overflow-hidden gradient-background"
     >
-      {/* Background with gradient and tech pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-emerald-100 tech-pattern"></div>
-
-      {/* Floating geometric shapes */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-          className="absolute top-20 right-20 w-32 h-32 border-2 border-emerald-200 rounded-full opacity-30"
-        />
-        <motion.div
-          animate={{ y: [-20, 20, -20] }}
-          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-r from-emerald-200 to-emerald-300 rounded-lg opacity-40"
-        />
-      </div>
-
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -99,7 +80,6 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Features list */}
             <div className="grid grid-cols-2 gap-4 text-sm">
               {[
                 'TypeScript',
@@ -122,7 +102,6 @@ const Hero = () => {
               ))}
             </div>
 
-            {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -157,26 +136,21 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Visual */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative floating-animation ">
+            <div className="relative ">
               <div className="relative z-10 rounded-xl overflow-hidden">
                 <img
-                  alt="Mockup de laptop mostrando site WordPress moderno"
+                  alt="Mockup de foto de Muryllo Vieira desenvolvedor front-end e mobile"
                   className="w-full max-w-md mx-auto"
-                  src="https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/11/10894EDC-4837-4CD0-B42D-9D381CD7425C-scaled.jpg"
+                  src="./src/images/muryllo.png"
                 />
               </div>
             </div>
-
-            {/* Decorative elements */}
-            <div className="absolute -top-10 -left-10 w-20 h-20 bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-full opacity-20 blur-xl"></div>
-            <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-gradient-to-r from-emerald-300 to-emerald-500 rounded-full opacity-10 blur-2xl"></div>
           </motion.div>
         </div>
       </div>

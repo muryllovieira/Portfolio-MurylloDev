@@ -6,7 +6,7 @@ const About = () => {
     { name: 'React', level: 100 },
     { name: 'TypeScript', level: 100 },
     { name: 'Kotlin', level: 100 },
-    { name: 'Node', level: 100 },
+    { name: 'JavaScript', level: 100 },
     { name: 'UX/UI Design', level: 100 },
   ];
 
