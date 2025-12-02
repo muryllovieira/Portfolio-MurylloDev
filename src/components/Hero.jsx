@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { Download, Play } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const Hero = () => {
   const scrollToSection = href => {
@@ -9,6 +10,32 @@ const Hero = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const typingTexts = [
+    'const Muryllo = (name, technologies) => {',
+    'Hello World, my name is...',
+  ];
+
+  const [currentText, setCurrentText] = useState('');
+  const [textIndex, setTextIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setTimeout(() => {
+      const fullText = typingTexts[textIndex];
+      setCurrentText(fullText.substring(0, charIndex + 1));
+      if (charIndex < fullText.length) {
+        setCharIndex(charIndex + 1);
+      } else {
+        setTimeout(() => {
+          setCharIndex(0);
+          setTextIndex((textIndex + 1) % typingTexts.length);
+        }, 2000);
+      }
+    }, 80);
+
+    return () => clearTimeout(interval);
+  }, [charIndex, textIndex]);
 
   return (
     <section
@@ -51,6 +78,11 @@ const Hero = () => {
               <span>Desenvolvedor Front-End & Mobile</span>
             </motion.div>
 
+            <div className="space-y-6">
+              <p className="font-mono text-emerald-600 text-base md:text-lg">
+                <span className="blinking-cursor">{currentText}</span>
+              </p>
+            </div>
             <div className="space-y-6">
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 <span className="gradient-text">Muryllo Vieira</span>
@@ -98,7 +130,7 @@ const Hero = () => {
               className="flex flex-col sm:flex-row gap-4"
             >
               <a
-                href="../pdf/CV - MURYLLO VIEIRA.pdf"
+                href="./src/pdf/CV - MURYLLO VIEIRA.pdf"
                 class="saiba-mais"
                 download
                 target="_blank"
@@ -132,8 +164,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative floating-animation">
-              <div className="relative z-10">
+            <div className="relative floating-animation ">
+              <div className="relative z-10 rounded-xl overflow-hidden">
                 <img
                   alt="Mockup de laptop mostrando site WordPress moderno"
                   className="w-full max-w-md mx-auto"
