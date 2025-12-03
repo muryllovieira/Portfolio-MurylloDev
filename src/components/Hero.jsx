@@ -146,9 +146,10 @@ const Hero = () => {
               <div className="relative z-10 rounded-xl overflow-hidden">
                 <img
                   alt="Mockup de foto de Muryllo Vieira desenvolvedor front-end e mobile"
-                  className="w-full max-w-md mx-auto"
-                  src="./src/images/muryllo.png"
+                  className="w-full max-w-2xl mx-auto img-me"
+                  src="https://muryllovieira.com.br/muryllo.png"
                 />
+                <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-b from-transparent to-white/30 rounded-xl pointer-events-none"></div>
               </div>
             </div>
           </motion.div>

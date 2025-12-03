@@ -151,10 +151,10 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="p-20 relative min-h-screen flex items-center overflow-hidden"
+      className="relative overflow-hidden py-16 lg:min-h-screen lg:flex lg:items-center"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-emerald-100 tech-pattern"></div>
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-emerald-100 tech-pattern -z-10"></div>
+      <div className="absolute inset-0 overflow-hidden -z-10">
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
@@ -166,6 +166,7 @@ const Portfolio = () => {
           className="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-r from-emerald-200 to-emerald-300 rounded-lg opacity-40"
         />
       </div>
+
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -249,7 +250,7 @@ const Portfolio = () => {
         </div>
 
         {/* REPOSITÓRIOS DO GITHUB */}
-        <div>
+        <div className="relative z-10">
           <h3 className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
             <Github className="w-6 h-6 text-gray-900" />
             Repositórios no GitHub
@@ -349,8 +350,8 @@ const Portfolio = () => {
               </div>
             </>
           )}
-          <div className="absolute -top-10 w-20 h-20 bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-full opacity-20 blur-xl"></div>
-          <div className="absolute -bottom-10 w-32 h-32 bg-gradient-to-r from-emerald-300 to-emerald-500 rounded-full opacity-10 blur-2xl"></div>
+          <div className="absolute -top-10 w-20 h-20 bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-full opacity-20 blur-xl -z-10"></div>
+          <div className="absolute -bottom-10 w-32 h-32 bg-gradient-to-r from-emerald-300 to-emerald-500 rounded-full opacity-10 blur-2xl -z-10"></div>
         </div>
       </div>
     </section>

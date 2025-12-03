@@ -34,93 +34,80 @@ const Footer = () => {
     { icon: Github, href: 'https://github.com/muryllovieira', label: 'Github' },
   ];
 
-  const scrollToSection = href => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <footer className="bg-gray-900 text-white relative overflow-hidden">
+    <footer className="bg-gray-900 text-white relative overflow-hidden lg:flex lg:items-center justify-center lg:flex-row flex-col py-16">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="tech-pattern w-full h-full"></div>
       </div>
 
-      <div className="container  mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10">
         {/* Main Footer Content */}
-        <div className="py-16 flex justify-evenly md:grid-cols-2  gap-8">
+        <div className="flex flex-col lg:flex-row justify-center lg:justify-between space-y-8 lg:space-y-0 items-center lg:items-start">
           {/* Company Info */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-6 lg:w-1/3 flex flex-col items-center"
           >
-            <div>
-              <motion.img
-                src={logo}
-                alt="Muryllo Dev Logo"
-                className="h-12 "
-                whileHover={{ scale: 1.05 }}
-              />
-            </div>
+            <motion.img
+              src={logo}
+              alt="Muryllo Dev Logo"
+              className="h-12"
+              whileHover={{ scale: 1.05 }}
+            />
 
             {/* Contact Info */}
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
+            <div className="space-y-3 text-center">
+              <div className="flex items-center space-x-3 justify-center">
                 <Mail className="w-5 h-5 text-emerald-400 flex-shrink-0" />
                 <span className="text-gray-300">muryllovieira59@gmail.com</span>
               </div>
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3 justify-center">
                 <MessageCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
                 <span className="text-gray-300">+55 (11) 93328-5377</span>
               </div>
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3 justify-center">
                 <Phone className="w-5 h-5 text-emerald-400 flex-shrink-0" />
                 <span className="text-gray-300">+55 (11) 93328-5377</span>
               </div>
             </div>
           </motion.div>
 
-          {/* Quick Links */}
+          {/* Address */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
+            className="lg:w-1/3 flex flex-col items-center"
           >
-            {/* Address*/}
-            <span className="text-lg font-semibold text-white mb-6 block">
+            <span className="text-lg font-semibold text-white mb-6 block text-center">
               Endereço
             </span>
-            <div className="flex space-x-4">
-              {/* Contact Info */}
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <span className="text-gray-300">Cidade: Barueri</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="text-gray-300">Estado: São Paulo</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="text-gray-300">País: Brasil</span>
-                </div>
+            <div className="space-y-3 text-center">
+              <div className="flex items-center space-x-3 justify-center">
+                <span className="text-gray-300">Cidade: Barueri</span>
+              </div>
+              <div className="flex items-center space-x-3 justify-center">
+                <span className="text-gray-300">Estado: São Paulo</span>
+              </div>
+              <div className="flex items-center space-x-3 justify-center">
+                <span className="text-gray-300">País: Brasil</span>
               </div>
             </div>
           </motion.div>
 
-          {/* Badges & Certifications */}
+          {/* Social Links */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="space-y-6"
+            className="space-y-6 lg:w-1/3 flex flex-col items-center"
           >
-            {/* Social Links */}
-            <span className="text-lg font-semibold text-white mb-6 block">
+            <span className="text-lg font-semibold text-white mb-6 block text-center">
               Social
             </span>
             <div className="flex space-x-4">
@@ -139,9 +126,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 py-8">
-          <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0">
-            <div className="text-center md:text-left">
+        <div className="border-t border-gray-800 py-8 mt-8">
+          <div className="flex flex-col justify-center items-center">
+            <div className="text-center">
               <p className="text-gray-400 text-sm">
                 © {currentYear} Muryllo Dev. Todos os direitos reservados. |
                 Desenvolvido por Muryllo Vieira em São Paulo
