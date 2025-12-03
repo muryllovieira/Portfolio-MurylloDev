@@ -109,7 +109,7 @@ const Hero = () => {
               className="flex flex-col sm:flex-row gap-4"
             >
               <a
-                href="./src/pdf/CV - MURYLLO VIEIRA.pdf"
+                href="https://muryllovieira.com.br/CV - MURYLLO VIEIRA.pdf"
                 class="saiba-mais"
                 download
                 target="_blank"

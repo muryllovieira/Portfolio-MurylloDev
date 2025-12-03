@@ -12,22 +12,22 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>Portfólio - Muryllo Dev</title>
+        <title>Portfólio - Muryllo Vieira</title>
         <meta
           name="description"
-          content="Desenvolvimento profissional de sites WordPress e lojas virtuais WooCommerce. SEO otimizado, design responsivo e foco em conversão. Mais de 50 projetos entregues com satisfação."
+          content="Desenvolvedor Front-end & Mobile especializado em React, React Native e TypeScript. Crio interfaces modernas, performáticas e focadas na experiência do usuário."
         />
-        <meta property="og:title" content="Portfólio - Muryllo Dev" />
+        <meta property="og:title" content="Portfólio - Muryllo Vieira" />
         <meta
           property="og:description"
-          content="Desenvolvimento profissional de sites WordPress e lojas virtuais WooCommerce. SEO otimizado, design responsivo e foco em conversão."
+          content="Desenvolvedor Front-end & Mobile especializado em React, React Native e TypeScript. Crio interfaces modernas, performáticas e focadas na experiência do usuário."
         />
         <meta property="og:type" content="website" />
         <meta
           name="keywords"
-          content="wordpress, woocommerce, desenvolvimento web, loja virtual, ecommerce, seo, sites responsivos"
+          content="react, react native, typescript, desenvolvimento web, nextjs, tailwind, desenvolvimento mobile, front-end, mobile, interfaces modernas, experiência do usuário"
         />
-        <meta name="author" content="Muryllo Dev" />
+        <meta name="author" content="Muryllo Vieira" />
         <link rel="canonical" href="https://muryllovieira.com.br" />
       </Helmet>
 

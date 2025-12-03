@@ -40,14 +40,13 @@ const TechIcon = ({ name }) => {
 
 const Portfolio = () => {
   const localProjects = [
-    // ... seus 6 projetos locais ...
     {
       id: 1,
       title: 'Costuriê',
       category: 'Web & Mobile',
       niche: 'Aplicativo e Website para Costureiras',
       image:
-        'https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/11/Gemini_Generated_Image_bqvrvvbqvrvvbqvr.png',
+        'https://muryllovieira.com.br/Gemini_Generated_Image_bqvrvvbqvrvvbqvr.png',
       description:
         'Desenvolvimento de uma aplicação web e mobile para costureiras gerenciarem pedidos de forma eficiente.',
       stack: ['React', 'Kotlin', 'HTML5', 'JavaScript', 'Axios'],
@@ -63,7 +62,7 @@ const Portfolio = () => {
       category: 'Dashboard/Admin',
       niche: 'Interface de Gerenciamento',
       image:
-        'https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/11/Gemini_Generated_Image_tfnb2ytfnb2ytfnb.png',
+        'https://muryllovieira.com.br/Gemini_Generated_Image_tfnb2ytfnb2ytfnb.png',
       description:
         'Desenvolvimento de uma interface de administrador complexa e acessível seguindo as diretrizes WCAG.',
       stack: ['Vue.js', 'TypeScript', 'Tailwind', 'React'],
@@ -79,7 +78,7 @@ const Portfolio = () => {
       category: 'Aplicativo',
       niche: 'Sistema de Monitoramento',
       image:
-        'https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/11/Gemini_Generated_Image_vh466qvh466qvh46.png',
+        'https://muryllovieira.com.br/Gemini_Generated_Image_vh466qvh466qvh46.png',
       description:
         'Aplicativo focado em monitoramento de saúde com alta performance e responsividade.',
       stack: ['React Native', 'TypeScript', 'Axios', 'Atomic Design'],
@@ -94,8 +93,7 @@ const Portfolio = () => {
       title: 'Baterias Booking',
       category: 'Landing Page',
       niche: 'Portífólio de Loja',
-      image:
-        'https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/09/2025-09-05_13-31.png',
+      image: 'https://muryllovieira.com.br/2025-09-05_13-31.png',
       description:
         'Página de aterrissagem focada em conversão, com layout totalmente responsivo para todos os dispositivos.',
       stack: ['HTML5', 'Wordpress', 'TypeScript'],
@@ -111,7 +109,7 @@ const Portfolio = () => {
       category: 'Web & Mobile',
       niche: 'Gerenciamento de Projetos',
       image:
-        'https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/12/51c2c0f7-fca9-477b-894e-d7cdc3b422b1.png',
+        'https://muryllovieira.com.br/51c2c0f7-fca9-477b-894e-d7cdc3b422b1.png',
       description:
         'Uma ferramenta visual de gerenciamento de projetos e tarefas para organizar o trabalho de forma colaborativa.',
       stack: ['React Native', 'TypeScript', 'Axios', 'React', 'Atomic Design'],
@@ -126,8 +124,7 @@ const Portfolio = () => {
       title: 'Joalheria Online',
       category: 'PWA',
       niche: 'Loja Virtual de Joias',
-      image:
-        'https://aquamarine-hornet-945619.hostingersite.com/wp-content/uploads/2025/12/Desktop-1.png',
+      image: 'https://muryllovieira.com.br/Desktop-1.png',
       description:
         'Transformação em Progressive Web App (PWA) para acesso instantâneo.',
       stack: ['Tailwind', 'React', 'HTML5', 'Axios'],

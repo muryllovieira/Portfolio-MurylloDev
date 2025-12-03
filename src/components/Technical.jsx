@@ -103,7 +103,7 @@ const TechnicalSection = () => {
         style={{
           background:
             'linear-gradient(135deg, #065F46 0%, rgba(6, 95, 70, 0.3) 50%, rgba(6, 95, 70, 0) 100%)',
-          backgroundImage: 'url("../src/images/dataism-24.svg")',
+          backgroundImage: 'url("https://muryllovieira.com.br/dataism-24.svg")',
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center right',
